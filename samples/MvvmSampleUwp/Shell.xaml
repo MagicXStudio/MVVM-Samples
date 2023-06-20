@@ -32,7 +32,7 @@
             <muxc:NavigationView.AutoSuggestBox>
                 <AutoSuggestBox
                     AutomationProperties.Name="Search"
-                    PlaceholderText="Search"
+                    PlaceholderText="搜索"
                     QueryIcon="Find"
                     SuggestionChosen="AutoSuggestBox_OnSuggestionChosen"
                     TextChanged="SearchBox_OnTextChanged">
@@ -47,12 +47,60 @@
             <muxc:NavigationView.MenuItems>
                 <muxc:NavigationViewItem
                     x:Name="IntroductionItem"
-                    Content="Introduction"
+                    Content="图片"
                     Icon="Play"
-                    ToolTipService.ToolTip="Introduction to the MVVM Toolkit package, how to install it and the types it contains." />
+                    ToolTipService.ToolTip="Introduction to the MVVM Toolkit package, how to install it and the types it contains.">
+                <muxc:NavigationViewItem.MenuItems>
+                    <muxc:NavigationViewItem
+                            x:Name="ItemA"
+                            Content="精选"
+                            Icon="ClearSelection"
+                            ToolTipService.ToolTip="Brand new iscenarios.">
+                        <muxc:NavigationViewItem.MenuItems>
+                            <muxc:NavigationViewItem
+                                    x:Name="ItemB"
+                                    Content="原创"
+                                    Icon="ReShare"
+                                    ToolTipService.ToolTip="An attr fields." />
+                            <muxc:NavigationViewItem
+                                    x:Name="ItemC"
+                                    Content="收藏"
+                                    Icon="Directions"
+                                    ToolTipService.ToolTip="An attribute methods." />
+                            </muxc:NavigationViewItem.MenuItems>
+                    </muxc:NavigationViewItem>
+                    <muxc:NavigationViewItem
+                            x:Name="Item4"
+                            Content="私密"
+                            Icon="Sort"
+                            ToolTipService.ToolTip="A base class yPropertyChanged." />
+                    <muxc:NavigationViewItem
+                            x:Name="Item8"
+                            Content="专辑"
+                            Icon="AllApps"
+                            ToolTipService.ToolTip="A base class faErrorInfo." />
+                        <muxc:NavigationViewItem
+                            Content="Commands"
+                            Icon="Calendar"
+                            ToolTipService.ToolTip="A collection ofinterface.">
+                            <muxc:NavigationViewItem.MenuItems>
+                                <muxc:NavigationViewItem
+                                    x:Name="Item2"
+                                    Content="Relay commands"
+                                    Icon="Library"
+                                    ToolTipService.ToolTip="Get startVVM Toolkit." />
+                                <muxc:NavigationViewItem
+                                    x:Name="Item3"
+                                    Content="Async commands"
+                                    Icon="Flag"
+                                    ToolTipService.ToolTip="An overview erations." />
+                            </muxc:NavigationViewItem.MenuItems>
+                        </muxc:NavigationViewItem>
+                    </muxc:NavigationViewItem.MenuItems>
+                    </muxc:NavigationViewItem>
                 <muxc:NavigationViewItemSeparator />
                 <muxc:NavigationViewItem
-                    Content="Building Blocks"
+                    Content="音频"
                     Icon="ViewAll"
                     IsExpanded="True"
                     ToolTipService.ToolTip="A showcase of all the individual building blocks available in the MVVM Toolkit.">
@@ -139,7 +187,7 @@
                 </muxc:NavigationViewItem>
                 <muxc:NavigationViewItem
                     x:Name="RedditBrowserOverviewItem"
-                    Content="Putting Things Together"
+                    Content="视频"
                     Icon="{ui:FontIcon Glyph=&#xE74C;}"
                     ToolTipService.ToolTip="Examples of how to put multiple pieces together for building an app.">
                     <muxc:NavigationViewItem.MenuItems>
