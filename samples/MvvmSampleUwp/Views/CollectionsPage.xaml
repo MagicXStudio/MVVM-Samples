@@ -18,17 +18,7 @@
 
     <ScrollViewer Padding="{StaticResource DocumentationPageContentPadding}" CanContentRenderOutsideBounds="True">
         <StackPanel Spacing="16">
-            <controls:DocumentationBlock Text="{x:Bind ViewModel.GetParagraph('ObservableGroup&lt;TKey, TElement> and ReadOnlyObservableGroup&lt;TKey, TElement>'), Mode=OneWay}" />
-
-            <controls:InteractiveSample xml:space="preserve">
-                <controls:InteractiveSample.Content>
-                    <widgets:ContactsListWidget />
-                </controls:InteractiveSample.Content>
-                 </controls:InteractiveSample>
-
-            <controls:DocumentationBlock Text="{x:Bind ViewModel.GetParagraph('ObservableGroup&lt;TKey, TElement> features'), Mode=OneWay}" />
-            <controls:DocumentationBlock Text="{x:Bind ViewModel.GetParagraph('ObservableGroupedCollection&lt;TKey, TElement> and ReadOnlyObservableGroupedCollection&lt;TKey, TElement>'), Mode=OneWay}" />
-            <controls:DocumentationBlock Text="{x:Bind ViewModel.GetParagraph('ObservableGroupedCollection&lt;TKey, TElement> features'), Mode=OneWay}" />
+            <widgets:ContactsListWidget />
         </StackPanel>
     </ScrollViewer>
 </Page>

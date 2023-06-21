@@ -18,9 +18,8 @@
         </core:EventTriggerBehavior>
     </interactivity:Interaction.Behaviors>
 
-    <Grid Height="480">
+    <Grid Height="900">
         <Grid.Resources>
-
             <!--  Shared menu flyout for all contacts  -->
             <MenuFlyout x:Key="ContactMenuFlyout">
                 <MenuFlyoutItem
@@ -127,14 +126,11 @@
                 </GridView>
             </SemanticZoom.ZoomedOutView>
         </SemanticZoom>
-
-        <!--  Loads more contacts  -->
         <Button
-            
             HorizontalAlignment="Right"
             VerticalAlignment="Bottom"
             Style="{StaticResource AccentButtonStyle}"
             Command="{x:Bind ViewModel.LoadMoreContactsCommand}"
-            Content="Load more contacts" />
+            Content="More" />
     </Grid>
 </UserControl>
