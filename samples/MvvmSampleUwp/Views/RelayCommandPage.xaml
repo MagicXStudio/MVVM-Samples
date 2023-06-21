@@ -14,67 +14,13 @@
             <core:InvokeCommandAction Command="{x:Bind ViewModel.LoadDocsCommand}" CommandParameter="RelayCommand" />
         </core:EventTriggerBehavior>
     </interactivity:Interaction.Behaviors>
-
     <ScrollViewer Padding="{StaticResource DocumentationPageContentPadding}" CanContentRenderOutsideBounds="True">
         <StackPanel Spacing="16">
-            <controls:DocumentationBlock Text="{x:Bind ViewModel.GetParagraph('RelayCommand and RelayCommand&lt;T>'), Mode=OneWay}" />
-            <controls:DocumentationBlock Text="{x:Bind ViewModel.GetParagraph('How they work'), Mode=OneWay}" />
-            <controls:DocumentationBlock Text="{x:Bind ViewModel.GetParagraph('Working with `ICommand`'), Mode=OneWay}" />
-
-            <controls:InteractiveSample xml:space="preserve">
-                <controls:InteractiveSample.Content>
-                    <StackPanel Spacing="8">
-                        <TextBlock Text="{x:Bind ViewModel.Counter, Mode=OneWay}" />
-                        <Button Command="{x:Bind ViewModel.IncrementCounterCommand}" Content="Click me!" />
-                    </StackPanel>
-                </controls:InteractiveSample.Content>
-                <controls:InteractiveSample.XamlCode>
-&lt;Page
-    x:Class=&quot;MyApp.Views.MyPage&quot;
-    xmlns:viewModels=&quot;[viewModels]using:MyApp.ViewModels&quot;&gt;
-    &lt;Page.DataContext&gt;
-        &lt;viewModels:MyViewModel x:Name=&quot;ViewModel&quot;/&gt;
-    &lt;/Page.DataContext&gt;
-
-    &lt;StackPanel Spacing=&quot;8&quot;&gt;
-        &lt;TextBlock Text=&quot;{x:Bind ViewModel.Counter, Mode=OneWay}&quot;/&gt;
-        &lt;Button
-            Content=&quot;Click me!&quot;
-            Command=&quot;{x:Bind ViewModel.IncrementCounterCommand}&quot;/&gt;
-    &lt;/StackPanel&gt;
-&lt;/Page&gt;
-                </controls:InteractiveSample.XamlCode>
-                <controls:InteractiveSample.CSharpCode>
-public class MyViewModel : ObservableObject
-{
-    public MyViewModel()
-    {
-        IncrementCounterCommand = new RelayCommand(IncrementCounter);
-    }
-
-    /// &lt;summary&gt;
-    /// Gets the &lt;see cref=&quot;ICommand&quot;/&gt; responsible for incrementing &lt;see cref=&quot;Counter&quot;/&gt;.
-    /// &lt;/summary&gt;
-    public ICommand IncrementCounterCommand { get; }
-
-    private int counter;
-
-    /// &lt;summary&gt;
-    /// Gets the current value of the counter.
-    /// &lt;/summary&gt;
-    public int Counter
-    {
-        get =&gt; counter;
-        private set =&gt; SetProperty(ref counter, value);
-    }
-
-    /// &lt;summary&gt;
-    /// Increments &lt;see cref=&quot;Counter&quot;/&gt;.
-    /// &lt;/summary&gt;
-    private void IncrementCounter() =&gt; Counter++;
-}
-                </controls:InteractiveSample.CSharpCode>
-            </controls:InteractiveSample>
+            <StackPanel Spacing="8">
+                <TextBlock Text="{x:Bind ViewModel.Counter, Mode=OneWay}" />
+                <Button Command="{x:Bind ViewModel.IncrementCounterCommand}" Content="Click me!" />
+                <Button Command="{x:Bind ViewModel.GetFilesCommand}" Content="GetFilesCommand" />
+            </StackPanel>
         </StackPanel>
     </ScrollViewer>
 </Page>
