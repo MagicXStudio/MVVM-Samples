@@ -13,6 +13,8 @@ using NavigationView = Microsoft.UI.Xaml.Controls.NavigationView;
 using NavigationViewItem = Microsoft.UI.Xaml.Controls.NavigationViewItem;
 using NavigationViewBackRequestedEventArgs = Microsoft.UI.Xaml.Controls.NavigationViewBackRequestedEventArgs;
 using NavigationViewItemInvokedEventArgs = Microsoft.UI.Xaml.Controls.NavigationViewItemInvokedEventArgs;
+using MediaPlayer;
+using MediaPlayer.Views.Images;
 
 #nullable enable
 
@@ -46,6 +48,7 @@ public sealed partial class Shell : UserControl
             new SampleEntry(ViewModelsSetupItem, typeof(SettingUpTheViewModelsPage), "Setting up the ViewModels"),
             new SampleEntry(SettingsServiceItem, typeof(SettingsServicePage), "Settings service"),
             new SampleEntry(RedditServiceItem, typeof(RedditServicePage), "Reddit service"),
+            new SampleEntry(ThumbnailViewItem, typeof(ThumbnailViewPage), "相册"),
             new SampleEntry(BuildingTheUIItem, typeof(BuildingTheUIPage), "Building the UI"),
             new SampleEntry(FinalResultItem, typeof(RedditBrowserPage), "Reddit browser")
         };

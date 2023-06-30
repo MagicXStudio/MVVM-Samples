@@ -219,6 +219,11 @@
                             Icon="{ui:FontIcon Glyph=&#xEB3C;}"
                             ToolTipService.ToolTip="Building the UI to connect to the backend." />
                         <muxc:NavigationViewItem
+                            x:Name="ThumbnailViewItem"
+                            Content="相册"
+                            Icon="{ui:FontIcon Glyph=&#xEB3C;}"
+                            ToolTipService.ToolTip="相册" />
+                        <muxc:NavigationViewItem
                             x:Name="FinalResultItem"
                             Content="The final result!"
                             Icon="{ui:FontIcon Glyph=&#xF1AD;}"

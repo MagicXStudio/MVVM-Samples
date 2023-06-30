@@ -145,6 +145,9 @@
     <Compile Include="Views\BuildingTheUIPage.xaml.cs">
       <DependentUpon>BuildingTheUIPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Images\ThumbnailPage.xaml.cs">
+      <DependentUpon>ThumbnailPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\INotifyPropertyChangedAttributePage.xaml.cs">
       <DependentUpon>INotifyPropertyChangedAttributePage.xaml</DependentUpon>
     </Compile>
@@ -405,7 +408,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\Images\ThumbnailView.xaml">
+    <Page Include="Views\Images\ThumbnailPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -55,6 +55,7 @@ sealed partial class App : Application
                 .AddTransient<AsyncRelayCommandPageViewModel>()
                 .AddTransient<IocPageViewModel>()
                 .AddTransient<MessengerPageViewModel>()
+                .AddTransient<ThumbnailViewModel>()
                 .AddTransient<ObservableObjectPageViewModel>()
                 .AddTransient<ObservableValidatorPageViewModel>()
                 .AddTransient<ValidationFormWidgetViewModel>()
