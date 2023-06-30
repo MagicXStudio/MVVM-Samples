@@ -25,9 +25,17 @@
                 <MenuFlyoutItem
                     Command="{x:Bind ViewModel.DeleteContactCommand}"
                     CommandParameter="{Binding}"
-                    Text="Remove contact">
+                    Text="移除">
                     <MenuFlyoutItem.Icon>
                         <SymbolIcon Symbol="Delete" />
+                    </MenuFlyoutItem.Icon>
+                </MenuFlyoutItem>
+                <MenuFlyoutItem 
+                    Command="{x:Bind ViewModel.AddContactCommand}"
+                    CommandParameter="{Binding}"
+                    Text="添加">
+                    <MenuFlyoutItem.Icon>
+                        <SymbolIcon Symbol="Add" />
                     </MenuFlyoutItem.Icon>
                 </MenuFlyoutItem>
             </MenuFlyout>
@@ -74,6 +82,7 @@
                         x:Phase="2"
                         Style="{ThemeResource BodyTextBlockStyle}"
                         Text="{x:Bind Email}" />
+                
                 </Grid>
             </DataTemplate>
         </Grid.Resources>

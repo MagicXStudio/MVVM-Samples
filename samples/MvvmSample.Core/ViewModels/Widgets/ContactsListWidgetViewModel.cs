@@ -78,4 +78,15 @@ public partial class ContactsListWidgetViewModel : ObservableObject
     {
         Contacts.FirstGroupByKey(char.ToUpperInvariant(contact.Name.First[0]).ToString()).Remove(contact);
     }
+
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="contact"></param>
+    [RelayCommand(FlowExceptionsToTaskScheduler = true)]
+    private async Task AddContact(Contact contact)
+    {
+        await Task.CompletedTask;
+    }
 }
