@@ -1,15 +1,25 @@
-﻿// Licensed to the .NET Foundation under one or more agreements.
-// The .NET Foundation licenses this file to you under the MIT license.
-// See the LICENSE file in the project root for more information.
-
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using MvvmSample.Core.Services;
+using System;
+using System.Threading.Tasks;
 
 namespace MvvmSample.Core.ViewModels;
 
-public partial class CollectionsPageViewModel : SamplePageViewModel
+public partial class CollectionsPageViewModel : ObservableObject
 {
-    public CollectionsPageViewModel(IFilesService filesService) 
-        : base(filesService)
+    private IFilesService FilesServices { get; }
+
+    public CollectionsPageViewModel(IFilesService filesService)
     {
+        FilesServices = filesService;
+        OpenFileCommand = new AsyncRelayCommand<string>(OpenFileAsync);
+    }
+
+    public IAsyncRelayCommand<string> OpenFileCommand { get; }
+
+    private async Task OpenFileAsync(string? name)
+    {
+        await Task.FromResult(Environment.CurrentDirectory);
     }
 }

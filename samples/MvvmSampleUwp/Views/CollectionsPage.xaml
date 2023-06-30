@@ -12,7 +12,7 @@
     mc:Ignorable="d">
     <interactivity:Interaction.Behaviors>
         <core:EventTriggerBehavior EventName="Loaded">
-            <core:InvokeCommandAction Command="{x:Bind ViewModel.LoadDocsCommand}" CommandParameter="ObservableGroupedCollections" />
+            <core:InvokeCommandAction Command="{x:Bind ViewModel.OpenFileCommand}" CommandParameter="ObservableGroupedCollections" />
         </core:EventTriggerBehavior>
     </interactivity:Interaction.Behaviors>
 
