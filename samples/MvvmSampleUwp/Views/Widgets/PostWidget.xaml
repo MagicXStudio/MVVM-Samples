@@ -26,7 +26,7 @@
             <ScrollViewer CanContentRenderOutsideBounds="True">
                 <TextBlock
                     Margin="16"
-                    Text="{x:Bind ViewModel.Post.SelfText, Mode=OneWay}"
+                    Text="{x:Bind ViewModel.Post.Magnet, Mode=OneWay}"
                     TextWrapping="WrapWholeWords" />
             </ScrollViewer>
         </Border>

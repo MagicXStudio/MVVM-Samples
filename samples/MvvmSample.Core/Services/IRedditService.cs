@@ -14,9 +14,9 @@ namespace MvvmSample.Core.Services;
 public interface IRedditService
 {
     /// <summary>
-    /// Get a list of posts from a given subreddit
+    /// https://eztv.re/api/get-torrents?limit=10&page=1
     /// </summary>
     /// <param name="subreddit">The subreddit name.</param>
-    [Get("/r/{subreddit}/.json")]
-    Task<PostsQueryResponse> GetSubredditPostsAsync(string subreddit);
+    [Get("/api/get-torrents?limit={limit}&page={page}")]
+    Task<PostsQueryResponse> GetSubredditPostsAsync(int page, string limit);
 }

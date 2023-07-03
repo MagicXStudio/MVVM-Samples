@@ -12,7 +12,7 @@ namespace MvvmSample.Core.Models;
 /// A class for a query for posts in a given subreddit.
 /// </summary>
 /// <param name="Data">Gets the listing data for the response.</param>
-public sealed record PostsQueryResponse([property: JsonPropertyName("data")] PostListing Data);
+public sealed record PostsQueryResponse([property: JsonPropertyName("torrents")] IList<Post> Items);
 
 /// <summary>
 /// A class for a Reddit listing of posts.
@@ -32,20 +32,11 @@ public sealed record PostData([property: JsonPropertyName("data")] Post Data);
 /// <param name="Title">Gets the title of the post.</param>
 /// <param name="Thumbnail">Gets the URL to the post thumbnail, if present.</param>
 public sealed record Post(
-    [property: JsonPropertyName("title")] string Title,
-    [property: JsonPropertyName("thumbnail")] string? Thumbnail)
+    [property: JsonPropertyName("filename")] string Title,
+    [property: JsonPropertyName("large_screenshot")] string? Thumbnail,
+    [property: JsonPropertyName("magnet_url")] string? Magnet
+    )
 {
-    /// <summary>
-    /// Gets the text of the post.
-    /// </summary>
-    /// <remarks>
-    /// Here we're just hardcoding some sample text to simplify how posts are displayed.
-    /// Normally, not all posts have a self text post available.
-    /// </remarks>
     [JsonIgnore]
-    public string SelfText { get; } = string.Join(" ", Enumerable.Repeat(
-@"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 20));
+    public string SelfText { get; }
 }

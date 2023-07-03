@@ -61,12 +61,9 @@ public sealed class SubredditWidgetViewModel : ObservableRecipient
     /// </summary>
     public IReadOnlyList<string> Subreddits { get; } = new[]
     {
-        "microsoft",
-        "windows",
-        "surface",
-        "windowsphone",
-        "dotnet",
-        "csharp"
+        "10",
+        "100",
+        "1000"
     };
 
     private string selectedSubreddit;
@@ -101,22 +98,13 @@ public sealed class SubredditWidgetViewModel : ObservableRecipient
     /// </summary>
     private async Task LoadPostsAsync()
     {
+        Posts.Clear();
         using (await LoadingLock.LockAsync())
         {
-            try
+            PostsQueryResponse response = await RedditService.GetSubredditPostsAsync(100, SelectedSubreddit);
+            foreach (Post item in response!.Items!)
             {
-                var response = await RedditService.GetSubredditPostsAsync(SelectedSubreddit);
-
-                Posts.Clear();
-
-                foreach (var item in response.Data!.Items!)
-                {
-                    Posts.Add(item.Data!);
-                }
-            }
-            catch
-            {
-                // Whoops!
+                Posts.Add(item!);
             }
         }
     }

@@ -225,9 +225,9 @@
                             ToolTipService.ToolTip="相册" />
                         <muxc:NavigationViewItem
                             x:Name="FinalResultItem"
-                            Content="The final result!"
+                            Content="eztv"
                             Icon="{ui:FontIcon Glyph=&#xF1AD;}"
-                            ToolTipService.ToolTip="The final working sample!" />
+                            ToolTipService.ToolTip="https://eztv.re" />
                     </muxc:NavigationViewItem.MenuItems>
                 </muxc:NavigationViewItem>
             </muxc:NavigationView.MenuItems>
