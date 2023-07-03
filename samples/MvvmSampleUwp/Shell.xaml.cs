@@ -42,7 +42,7 @@ public sealed partial class Shell : UserControl
             new SampleEntry(MessengerItem, typeof(MessengerPage), "Messenger and IMessenger", "messenger messaging message receiver recipient"),
             new SampleEntry(SendMessagesItem, typeof(MessengerSendPage), "[IMessenger] Send messages", "messenger messaging message receiver recipient send"),
             new SampleEntry(RequestMessagesItem, typeof(MessengerRequestPage), "[IMessenger] Request messages", "messenger messaging message receiver recipient request reply"),
-            new SampleEntry(InversionOfControlItem, typeof(IocPage), "Ioc (Inversion of control)", "ioc inversion control dependency injection service locator"),
+            new SampleEntry(RayTracer, typeof(RayTracer), "RayTracer)", "RayTracer"),
             new SampleEntry(CollectionsItem, typeof(CollectionsPage), "Collections", "collection observable mvvm group list grid items source"),
             new SampleEntry(RedditBrowserOverviewItem, typeof(PuttingThingsTogetherPage), "Putting things together"),
             new SampleEntry(ViewModelsSetupItem, typeof(SettingUpTheViewModelsPage), "Setting up the ViewModels"),

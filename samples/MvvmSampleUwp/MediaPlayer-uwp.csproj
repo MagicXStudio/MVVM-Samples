@@ -187,8 +187,8 @@
     <Compile Include="Views\MessengerPage.xaml.cs">
       <DependentUpon>MessengerPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\IocPage.xaml.cs">
-      <DependentUpon>IocPage.xaml</DependentUpon>
+    <Compile Include="Views\RayTracer.xaml.cs">
+      <DependentUpon>RayTracer.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\IntroductionPage.xaml.cs">
       <DependentUpon>IntroductionPage.xaml</DependentUpon>
@@ -464,7 +464,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\IocPage.xaml">
+    <Page Include="Views\RayTracer.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

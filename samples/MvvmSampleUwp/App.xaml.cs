@@ -53,7 +53,7 @@ sealed partial class App : Application
                 .AddTransient<SubredditWidgetViewModel>()
                 .AddTransient<ContactsListWidgetViewModel>()
                 .AddTransient<AsyncRelayCommandPageViewModel>()
-                .AddTransient<IocPageViewModel>()
+                .AddTransient<RayTracerViewModel>()
                 .AddTransient<AwesomeActionViewModel>()
                 .AddTransient<MessengerPageViewModel>()
                 .AddTransient<ThumbnailViewModel>()
