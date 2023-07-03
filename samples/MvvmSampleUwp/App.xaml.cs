@@ -54,6 +54,7 @@ sealed partial class App : Application
                 .AddTransient<ContactsListWidgetViewModel>()
                 .AddTransient<AsyncRelayCommandPageViewModel>()
                 .AddTransient<IocPageViewModel>()
+                .AddTransient<AwesomeActionViewModel>()
                 .AddTransient<MessengerPageViewModel>()
                 .AddTransient<ThumbnailViewModel>()
                 .AddTransient<ObservableObjectPageViewModel>()
