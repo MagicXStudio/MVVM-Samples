@@ -16,7 +16,7 @@
     </interactivity:Interaction.Behaviors>
     <ScrollViewer Padding="{StaticResource DocumentationPageContentPadding}" CanContentRenderOutsideBounds="True">
         <StackPanel Spacing="16">
-            <Button Command="{x:Bind ViewModel.StarAsyncCommand}" />
+            <Button  Content="Star" Command="{x:Bind ViewModel.StarAsyncCommand}" />
             <Button Command="{x:Bind ViewModel.StopAsyncCommand}" />
             <Canvas Name="canvas" Height="512" Width="768">
                 <Viewbox>
